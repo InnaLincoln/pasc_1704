@@ -1,0 +1,66 @@
+@import 'variables';
+
+.statistic {
+  border-top: 2px dashed $primary-font-color;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0 50px;
+  }
+
+  &__items {
+    @include flex(space-between, center, row, nowrap);
+
+    margin: 0 auto;
+  }
+
+  &__item {
+    @include flex(center, center, column, nowrap);
+
+    margin: 0 100px;
+  }
+
+  &__item-top {
+    @include font(72px, 700, -2);
+
+    text-align: center;
+  }
+
+  &__item-bottom {
+    @include font(18px, 300, 2);
+
+    text-align: center;
+  }
+
+  &__link {
+    @include font(30px, 700, 1, uppercase);
+
+    display: inline-block;
+    margin: 68px auto 0;
+
+    text-decoration: underline;
+    color: #515151;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__star {
+    background: $star-color;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+
+    &:last-child {
+      background: linear-gradient(to right,
+              $star-color 0%,
+              $star-color 80%,
+              $white 80%,
+              $white 100%
+      );
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@import 'variables';
+
+.header {
+  height: 520px;
+  background-color: #ededed;
+
+  &__wrapper {
+    @include flex(normal, normal, column, nowrap);
+
+    padding-top: 42px;
+  }
+
+  &__row {
+    @include flex(space-between, normal, row);
+
+    position: relative;
+  }
+
+  &__title {
+    @include font(48px, 400, 1.2, uppercase);
+
+    color: $primary-font-color;
+
+    &_float {
+      position: absolute;
+      bottom: -240px;
+      left: 165px;
+
+      font-size: 36px;
+      font-weight: 500;
+    }
+  }
+
+  &__title-bold {
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    @include font(18px, 200, 1.2);
+
+    color: $primary-font-color;
+  }
+
+  &__button {
+    @include font(24px, 600, 1.2, uppercase);
+
+    margin-top: 46px;
+    padding: 10px 10px 11px;
+
+    background-color: $primary-color;
+    border-radius: 10px;
+
+    text-align: center;
+    color: $white;
+  }
+
+  &__column {
+    &_stretch {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      margin-left: 84px;
+      margin-top: 102px;
+    }
+  }
+}
+
+.logo {
+  @include flex;
+
+  font-family: 'Roboto', sans-serif;
+
+  &__img {
+    width: 84px;
+    height: 92px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  &__title {
+    @include font(38px, 600, 1.2);
+
+    color: $primary-color;
+  }
+
+  &__subtitle {
+    @include font(12px, 300, 0.2);
+
+    color: #6d6d6d;
+  }
+}
+
+.navigation {
+  display: flex;
+
+  &_margin {
+    margin-top: 21px;
+  }
+
+  &__button {
+    @include font(18px, 700);
+
+    align-self: baseline;
+
+    color: $primary-font-color;
+
+    &_line {
+      position: relative;
+      font-weight: 300;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0;
+
+        width: 1px;
+        height: 12px;
+
+        background-color: $primary-font-color;
+      }
+    }
+  }
+
+  &__button-main {
+    text-transform: uppercase;
+  }
+}
+
+.phone {
+  position: absolute;
+  right: 0;
+  width: 320px;
+  height: 580px;
+
+  background-color: $white;
+  border-radius: 20px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+
+  &__inner {
+    position: relative;
+
+    width: 285px;
+    height: 510px;
+    margin: 50px auto 0;
+
+    border: thin solid #efefef;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+
+    width: 285px;
+    height: 403px;
+  }
+}

@@ -1,0 +1,30 @@
+$font-size-base: 18px;
+$font-size-big: 36px;
+
+$black: #000000;
+$white: #ffffff;
+$primary-color: #259ad7;
+$primary-color-light: #3fa2f7;
+$primary-font-color: #3e3e3f;
+$secondary-color: #297fca;
+$star-color: #ffbd66;
+
+@mixin font($size: $font-size-base,
+            $font-weight: 300,
+            $height: 1.4,
+            $text-transform: none,
+            $font-family: inherit) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $size;
+  line-height: $height;
+  text-transform: $text-transform;
+}
+
+@mixin flex($justify-content: normal, $align-items: normal, $direction: row, $wrap: wrap) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}

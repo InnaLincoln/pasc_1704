@@ -1,0 +1,38 @@
+@import 'variables';
+
+.intro {
+  max-height: 230px;
+  margin-top: 245px;
+
+  background: $primary-color;
+
+  color: $white;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__img {
+    width: 386px;
+    height: 217px;
+
+    box-sizing: content-box;
+    border-left: 10px solid $white;
+    border-right: 10px solid $white;
+  }
+
+  &__text {
+    margin-left: 50px;
+    padding: 30px 0;
+  }
+
+  &__title {
+    @include font(36px, 400, 1.2);
+  }
+
+  &__description {
+    @include font(18px, 300, 1.16);
+
+    margin-top: 14px;
+  }
+}

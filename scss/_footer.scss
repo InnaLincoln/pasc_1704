@@ -1,0 +1,151 @@
+@import 'variables';
+
+.footer {
+  min-height: 460px;
+
+  background-color: $primary-color;
+
+  color: $white;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      max-width: 138px;
+      margin-left: 70px;
+    }
+
+    &:nth-child(2) {
+      min-width: 400px;
+      max-width: 418px;
+    }
+
+    &:last-child {
+      max-width: 302px;
+      margin-top: 100px;
+    }
+  }
+
+  &__copyright {
+    @include font(18px, 600, 2.33);
+
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include font(36px, 500, 1.2);
+
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include font(16px, 200, 1.56);
+
+    margin: 10px 0 15px;
+  }
+
+  &__back-top {
+    @include font(16px, 200, 1.2);
+
+    margin-top: 100px;
+
+    text-align: right;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    @include font(18px, 200, 2.33);
+
+    align-self: flex-start;
+
+    color: $white;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    position: relative;
+
+    &::after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'/%3E%3C/svg%3E");
+      position: absolute;
+      top: -12px;
+      right: -6px;
+
+      width: 5px;
+      height: 5px;
+    }
+  }
+
+  &__label {
+    @include font(18px, 300, 1.44);
+    @include flex(space-between, center);
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 0;
+
+    &_check {
+      @include font(16px, 400, 1.2);
+
+      width: auto;
+      padding-left: 30px;
+    }
+  }
+
+  &__input {
+    align-self: flex-end;
+    width: 326px;
+    margin-left: 10px;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: thin solid $white;
+
+    &_check {
+      position: absolute;
+
+      width: auto;
+
+      appearance: none;
+      visibility: hidden;
+    }
+  }
+
+  &__check {
+    position: absolute;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 5px;
+    background-color: transparent;
+    border: 3px solid $white;
+  }
+
+  &__button {
+    @include font(16px, 500, 1.2);
+
+    padding: 14px 10px 16px;
+
+    background-color: #297fca;
+    border: 1px solid $white;
+    border-radius: 10px;
+  }
+}
